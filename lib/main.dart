@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'screens/calculator_screen.dart';
-import 'utils/app_theme.dart';
 
 // Punto de entrada de la aplicación Flutter.
 void main() {
@@ -18,7 +17,7 @@ class CalculatorApp extends StatelessWidget {
       // Oculta la etiqueta "DEBUG" de la esquina superior derecha.
       debugShowCheckedModeBanner: false,
       title: 'Calculadora',
-      theme: AppTheme.dark(),
+      theme: ThemeData(useMaterial3: true),
       // Esta será la pantalla que se muestra al abrir la aplicación.
       home: const CalculatorScreen(),
     );

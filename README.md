@@ -1,7 +1,7 @@
 # Calculadora Flutter
 
 Calculadora básica hecha paso a paso con Flutter. Permite sumar, restar,
-multiplicar, dividir, usar decimales, borrar dígitos y limpiar la pantalla.
+multiplicar, dividir, limpiar la pantalla y mostrar el resultado.
 
 ## 1. Estructura de carpetas
 
