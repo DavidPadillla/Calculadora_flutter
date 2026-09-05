@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// Botón reutilizable para no repetir el mismo diseño en cada tecla.
 class CalculatorButton extends StatelessWidget {
   const CalculatorButton({
     required this.label,
@@ -16,11 +17,14 @@ class CalculatorButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Obtiene los colores definidos en el tema global.
     final colorScheme = Theme.of(context).colorScheme;
 
     return ElevatedButton(
+      // Ejecuta la función que recibe desde la pantalla.
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
+        // Los operadores y las teclas de acción tienen colores diferentes.
         backgroundColor: isOperator
             ? colorScheme.primary
             : isAction
@@ -32,6 +36,7 @@ class CalculatorButton extends StatelessWidget {
                 ? colorScheme.onSecondaryContainer
                 : Colors.white,
         shape: RoundedRectangleBorder(
+          // Redondea las esquinas de cada botón.
           borderRadius: BorderRadius.circular(18),
         ),
       ),
