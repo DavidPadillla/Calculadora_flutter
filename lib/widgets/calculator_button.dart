@@ -5,11 +5,13 @@ class CalculatorButton extends StatelessWidget {
   const CalculatorButton({
     required this.label,
     required this.onPressed,
+    this.backgroundColor,
     super.key,
   });
 
   final String label;
   final VoidCallback onPressed;
+  final Color? backgroundColor;
 
   @override
   Widget build(BuildContext context) {
@@ -18,10 +20,8 @@ class CalculatorButton extends StatelessWidget {
       onPressed: onPressed,
       style: TextButton.styleFrom(
         foregroundColor: Colors.black,
-        backgroundColor: Colors.grey.shade200,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(4),
-        ),
+        backgroundColor: backgroundColor ?? Colors.grey.shade200,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
       ),
       child: Text(
         label,
